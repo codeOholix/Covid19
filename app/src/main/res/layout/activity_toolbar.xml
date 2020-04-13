@@ -1,0 +1,62 @@
+<com.google.android.material.appbar.AppBarLayout android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:background="@color/White"
+    android:elevation="0dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:background="@color/White"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_height="50dp" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/White"
+                    android:id="@+id/menu"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="14dp"
+                    android:src="@drawable/ic_menu_black_24dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        app:layout_constraintStart_toEndOf="@+id/menu"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:src="@drawable/logo"
+                            android:layout_gravity="center"
+                            android:layout_height="match_parent"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:text="Covid19"
+                            android:gravity="center"
+                            android:textColor="@color/card2"
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:layout_marginTop="2dp"
+                            android:textSize="15sp"/>
+
+                    </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>

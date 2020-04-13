@@ -1,0 +1,136 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:id="@+id/container_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <codeOholix.covid19.Util.UI.Sticky_Header
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <RelativeLayout
+            android:id="@+id/head"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:elevation="2dp"
+                android:layout_height="match_parent">
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:orientation="vertical"
+                    xmlns:android="http://schemas.android.com/apk/res/android">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:id="@+id/cards"
+                        android:orientation="horizontal"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_height="wrap_content"/>
+
+                    <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        app:cardCornerRadius="10dp"
+                        android:id="@+id/container"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:tag="sticky"
+                        app:cardElevation="3dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        xmlns:android="http://schemas.android.com/apk/res/android">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="match_parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="States/UT"
+                                    android:paddingStart="16dp"
+                                    android:layout_marginStart="40dp"
+                                    android:textColor="@color/card2"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    android:textSize="18sp"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:layout_gravity="center_horizontal"
+                                    android:textStyle="bold"
+                                    android:fontFamily="@font/poppins"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="25dp"
+                                    android:text="Deceased"
+                                    android:paddingEnd="10dp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/card2"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    android:id="@+id/status"
+                                    android:textSize="16sp"
+                                    android:fontFamily="@font/poppins"/>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:nestedScrollingEnabled="false"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/states_values"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+                    </androidx.core.widget.NestedScrollView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </codeOholix.covid19.Util.UI.Sticky_Header>
+
+    <LinearLayout
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:alpha="0.0"
+        android:visibility="gone"
+        android:id="@+id/network_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <include
+                layout="@layout/activity_offline_card" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

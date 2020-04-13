@@ -1,0 +1,59 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardCornerRadius="10dp"
+        android:id="@+id/card_container"
+        android:layout_marginStart="12dp"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:cardElevation="3dp"
+        android:layout_height="60dp"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="States/UT"
+                    android:id="@+id/states"
+                    android:paddingStart="20dp"
+                    android:textColor="@color/card1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/poppins"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="Status"
+                    android:textColor="@color/card1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/data_stats"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/poppins"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

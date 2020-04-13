@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/home_nav"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/navigation_social"
+        android:icon="@drawable/social"
+        android:title="Updates" />
+
+    <item
+        android:id="@+id/navigation_checkup"
+        android:icon="@drawable/ic_assignment_black_24dp"
+        android:title="Symptom Checker" />
+
+    <item
+        android:id="@+id/navigation__health_center"
+        android:icon="@drawable/ic_local_hospital_black_24dp"
+        android:title="Help Centers" />
+
+</menu>

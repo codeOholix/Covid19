@@ -1,0 +1,77 @@
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+ <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardCornerRadius="20dp"
+        android:id="@+id/network_status"
+        app:cardElevation="15dp"
+        android:layout_gravity="center_vertical"
+        app:cardBackgroundColor="@color/card2"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="15dp"
+        android:elevation="10dp"
+        android:layout_marginBottom="15dp"
+        android:layout_height="250dp"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bad Stuff Happened"
+                android:id="@+id/count"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/White"
+                android:textSize="30sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/poppins"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Unable to completed your"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/White"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="request. Please check your"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/White"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="     internet connection !!"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/White"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins"/>
+
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</RelativeLayout>
